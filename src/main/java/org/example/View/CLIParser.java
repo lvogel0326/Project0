@@ -53,7 +53,7 @@ public class CLIParser {
             String nameInput = sc.nextLine();
             System.out.println("Enter the new item number (must be numbers only): ");
             int newItemNumber = Integer.parseInt(sc.nextLine());
-          //  legos.replaceAll();
+          //  legos.set(1,newItemNumber);
             System.out.println("Enter the new difficulty level: ");
             String newDifficultyRating = sc.nextLine();
             legoService.editLego(nameInput, newItemNumber, newDifficultyRating);
