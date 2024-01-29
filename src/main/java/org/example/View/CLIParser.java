@@ -34,21 +34,46 @@ public class CLIParser {
             Scanner sc = new Scanner(System.in);
             List<Lego> legos = LegoService.getAllLego();
             if (legos.isEmpty()){
-              throw new LegoException("Lego exists");
-        }
-            System.out.println(legos.toString());
-            System.out.println("Enter Lego set name you want to delete: ");
+              throw new LegoException("Your Lego list is empty.");
+            }
+           // System.out.println(legos.toString());
+            System.out.println("Enter the Lego set name you want to DELETE: ");
             String nameInput = sc.nextLine();
             legoService.delLego(nameInput);
+            return "The Lego set, " + nameInput + ", was successfully deleted! ";
 
-            return "Lego set deleted! ";
+        }else if(command.equals("Edit")){
+            Scanner sc = new Scanner(System.in);
+            List<Lego> legos = LegoService.getAllLego();
+            if (legos.isEmpty()){
+                throw new LegoException("Your Lego list is empty.");
+            }
+         //   System.out.println(legos.toString());
+            System.out.println("Enter the name of the Lego set you want to EDIT: ");
+            String nameInput = sc.nextLine();
+            System.out.println("Enter the new item number (must be numbers only): ");
+            int newItemNumber = Integer.parseInt(sc.nextLine());
+          //  legos.replaceAll();
+            System.out.println("Enter the new difficulty level: ");
+            String newDifficultyRating = sc.nextLine();
+            legoService.editLego(nameInput, newItemNumber, newDifficultyRating);
+          //  legos.replaceAll();
+            return "The Lego set, " + nameInput + ", was successfully updated! ";
+
+
 
         }else if(command.equals("View")){
             List<Lego> legos = LegoService.getAllLego();
-            return "Here are your Lego sets: " + legos.toString();
+            if (legos.isEmpty()) {
+                throw new LegoException("Your Lego list is empty.");
+            }else {
+                return "Here are your Lego sets: " + legos.toString();
+            }
+
         }else{
           //  return "";  // this will return nothing ("Enter Add or View" will display again)
             throw new CLIException("not a valid entry");
         }
     }
 }
+

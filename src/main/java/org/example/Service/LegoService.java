@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+
 public class LegoService {
     static List<Lego> legos;
     public LegoService() {
@@ -40,9 +41,6 @@ public class LegoService {
 
     }
 
-    // I can't make this delete part work.
-    // * *
-
     public void delLego (String name) throws LegoException {
         Main.log.info("Attempting to delete a Lego." + name);
 
@@ -61,4 +59,21 @@ public class LegoService {
         }
 
    }
+    public void editLego (String name, int itemNumber, String difficultyRate) throws LegoException {
+        Main.log.info("Attempting to edit a Lego entry." + name + ", " + itemNumber + ", " + difficultyRate);
+
+        if (name.length()<1) {
+            Main.log.warn("throwing Lego exception due to misformatted name: "+name);
+            throw new LegoException("Lego name cannot be BLANK!");
+        } else if (itemNumber < 0) {
+            Main.log.warn("throwing Lego exception due to misformatted item number: "+itemNumber);
+            throw new LegoException("Please enter a NUMBER!");
+        } else if (difficultyRate.length()<1) {
+            Main.log.warn("throwing Lego exception due to misformatted difficulty rate: "+difficultyRate);
+            throw new LegoException("Difficulty Rate cannot be BLANK!");
+        }
+
+       // Lego l = new Lego(name, itemNumber, difficultyRate);
+      //  legos.(l);
+    }
 }

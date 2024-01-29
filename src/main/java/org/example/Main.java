@@ -20,7 +20,10 @@ public class Main {
         CLIParser cliParser = new CLIParser();
 
         while(true){
-            System.out.println("Enter Add, Delete, or View");
+            System.out.println("\n" +
+                            "Welcome to your Lego Catalog!" +
+                            "\nWhat would you like to do?" +
+                            "\nPlease enter: Add, Edit, Delete, or View");
             String input = sc.nextLine();
             try {
                 // 'try' means that this block of code could potentially throw an exception
