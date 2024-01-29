@@ -30,6 +30,19 @@ public class CLIParser {
             legoService.addLego(nameInput, itemNumberInput, difficultyRateInput);
             return "Lego set added! ";
 
+        }else if(command.equals("Delete")) {
+            Scanner sc = new Scanner(System.in);
+            List<Lego> legos = LegoService.getAllLego();
+            if (legos.isEmpty()){
+              throw new LegoException("Lego exists");
+        }
+            System.out.println(legos.toString());
+            System.out.println("Enter Lego set name you want to delete: ");
+            String nameInput = sc.nextLine();
+            legoService.delLego(nameInput);
+
+            return "Lego set deleted! ";
+
         }else if(command.equals("View")){
             List<Lego> legos = LegoService.getAllLego();
             return "Here are your Lego sets: " + legos.toString();
