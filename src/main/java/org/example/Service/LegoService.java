@@ -59,7 +59,7 @@ public class LegoService {
         }
 
    }
-    public void editLego (String name, int itemNumber, String difficultyRate) throws LegoException {
+    /*public void editLego (String name, int itemNumber, String difficultyRate) throws LegoException {
         Main.log.info("Attempting to edit a Lego entry." + name + ", " + itemNumber + ", " + difficultyRate);
 
         if (name.length()<1) {
@@ -73,7 +73,33 @@ public class LegoService {
             throw new LegoException("Difficulty Rate cannot be BLANK!");
         }
 
-       // Lego l = new Lego(name, itemNumber, difficultyRate);
-      //  legos.(l);
+
+    }*/
+
+    public void editLego (String name, int editItemNumber, String editDifficultyRate, Lego newLego) throws LegoException {
+        Main.log.info("Attempting to edit a Lego entry." + name + ", " + editItemNumber + ", " + editDifficultyRate);
+
+        if (name.length() < 1) {
+            Main.log.warn("throwing Lego exception due to misformatted name: " + name);
+            throw new LegoException("Lego name cannot be BLANK!");
+        } else if (editItemNumber < 0) {
+            Main.log.warn("throwing Lego exception due to misformatted item number: " + editItemNumber);
+            throw new LegoException("Please enter a NUMBER!");
+        } else if (editDifficultyRate.length() < 1) {
+            Main.log.warn("throwing Lego exception due to misformatted difficulty rate: " + editDifficultyRate);
+            throw new LegoException("Difficulty Rate cannot be BLANK!");
+        }
+
+        for (Lego l : legos) {
+            if (l.getName().equals(name)) {
+                legos.set(editItemNumber, new Lego (name, editItemNumber, editDifficultyRate));
+                return;
+            }
+        }
+        throw new LegoException("Lego with name " + name + " not found");
+
+      //  Lego l = new Lego(name, editItemNumber, editDifficultyRate);
+       // editLego(name, editItemNumber, editDifficultyRate, newLego);
+
     }
 }

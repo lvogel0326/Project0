@@ -42,6 +42,7 @@ public class CLIParser {
             legoService.delLego(nameInput);
             return "The Lego set, " + nameInput + ", was successfully deleted! ";
 
+
         }else if(command.equals("Edit")){
             Scanner sc = new Scanner(System.in);
             List<Lego> legos = LegoService.getAllLego();
@@ -52,11 +53,15 @@ public class CLIParser {
             System.out.println("Enter the name of the Lego set you want to EDIT: ");
             String nameInput = sc.nextLine();
             System.out.println("Enter the new item number (must be numbers only): ");
-            int newItemNumber = Integer.parseInt(sc.nextLine());
+         //   int newItemNumber = Integer.parseInt(sc.nextLine());
+            int editItemNumber = Integer.parseInt(sc.nextLine());
           //  legos.set(1,newItemNumber);
             System.out.println("Enter the new difficulty level: ");
-            String newDifficultyRating = sc.nextLine();
-            legoService.editLego(nameInput, newItemNumber, newDifficultyRating);
+          //  String newDifficultyRating = sc.nextLine();
+            String editDifficultyRating = sc.nextLine();
+          //  legoService.editLego(nameInput, newItemNumber, newDifficultyRating);
+            Lego newLego = new Lego(nameInput, editItemNumber, editDifficultyRating);
+            legoService.editLego(nameInput, editItemNumber, editDifficultyRating, newLego);
           //  legos.replaceAll();
             return "The Lego set, " + nameInput + ", was successfully updated! ";
 

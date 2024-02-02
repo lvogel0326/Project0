@@ -21,9 +21,11 @@ public class Main {
 
         while(true){
             System.out.println("\n" +
-                            "Welcome to your Lego Catalog!" +
+                            "\n*****************************************" +
+                            "\nWelcome to your Lego Catalog!" +
                             "\nWhat would you like to do?" +
-                            "\nPlease enter: Add, Edit, Delete, or View");
+                            "\nPlease enter: Add, Edit, Delete, or View" +
+                            "\n******************************************");
             String input = sc.nextLine();
             try {
                 // 'try' means that this block of code could potentially throw an exception

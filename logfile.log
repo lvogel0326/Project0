@@ -131,3 +131,28 @@ INFO	2024-01-29 17:30:18,896	28520	org.example.Main	[main]	Attempting to add a L
 INFO	2024-01-29 17:30:20,896	30520	org.example.Main	[main]	Now retrieving all Lego: [Lego{name='One', itemNumber=111, difficultyRate='easy'}, Lego{name='Two', itemNumber=222, difficultyRate='medium'}, Lego{name='Three', itemNumber=333, difficultyRate='hard'}]
 INFO	2024-01-29 17:30:36,728	46352	org.example.Main	[main]	Attempting to edit a Lego entry.Two, 211, Meh
 INFO	2024-01-29 17:30:39,008	48632	org.example.Main	[main]	Now retrieving all Lego: [Lego{name='One', itemNumber=111, difficultyRate='easy'}, Lego{name='Two', itemNumber=222, difficultyRate='medium'}, Lego{name='Three', itemNumber=333, difficultyRate='hard'}]
+INFO	2024-01-30 11:05:26,139	0	org.example.Main	[main]	Attempting to add a Lego.One, 123, easy
+INFO	2024-01-30 11:05:36,431	10292	org.example.Main	[main]	Attempting to add a Lego.Two, 234, med
+INFO	2024-01-30 11:05:50,448	24309	org.example.Main	[main]	Attempting to add a Lego.Three, 345, med
+INFO	2024-01-30 11:05:52,584	26445	org.example.Main	[main]	Now retrieving all Lego: [Lego{name='One', itemNumber=123, difficultyRate='easy'}, Lego{name='Two', itemNumber=234, difficultyRate='med'}, Lego{name='Three', itemNumber=345, difficultyRate='med'}]
+INFO	2024-01-30 11:06:07,816	41677	org.example.Main	[main]	Attempting to edit a Lego entry.Three, 333, hard
+INFO	2024-01-30 11:06:12,728	46589	org.example.Main	[main]	Now retrieving all Lego: [Lego{name='One', itemNumber=123, difficultyRate='easy'}, Lego{name='Two', itemNumber=234, difficultyRate='med'}, Lego{name='Three', itemNumber=345, difficultyRate='med'}]
+INFO	2024-02-02 15:04:07,377	0	org.example.Main	[main]	Attempting to add a Lego.One, 1234, easy
+INFO	2024-02-02 15:04:37,935	30558	org.example.Main	[main]	Attempting to add a Lego.Two, 2345, medium
+INFO	2024-02-02 15:04:56,047	48670	org.example.Main	[main]	Attempting to add a Lego.Three, 3456, hard
+INFO	2024-02-02 15:05:04,554	57177	org.example.Main	[main]	Now retrieving all Lego: [Lego{name='One', itemNumber=1234, difficultyRate='easy'}, Lego{name='Two', itemNumber=2345, difficultyRate='medium'}, Lego{name='Three', itemNumber=3456, difficultyRate='hard'}]
+INFO	2024-02-02 15:05:24,216	76839	org.example.Main	[main]	Now retrieving all Lego: [Lego{name='One', itemNumber=1234, difficultyRate='easy'}, Lego{name='Two', itemNumber=2345, difficultyRate='medium'}, Lego{name='Three', itemNumber=3456, difficultyRate='hard'}]
+INFO	2024-02-02 15:05:41,411	94034	org.example.Main	[main]	Attempting to edit a Lego entry.Three, 3344, easy
+INFO	2024-02-02 15:05:46,746	99369	org.example.Main	[main]	Now retrieving all Lego: [Lego{name='One', itemNumber=1234, difficultyRate='easy'}, Lego{name='Two', itemNumber=2345, difficultyRate='medium'}, Lego{name='Three', itemNumber=3456, difficultyRate='hard'}]
+INFO	2024-02-02 16:25:56,446	0	org.example.Main	[main]	Attempting to add a Lego.One, 1234, easy
+INFO	2024-02-02 16:26:13,483	17037	org.example.Main	[main]	Attempting to add a Lego.Two, 2343, medium
+INFO	2024-02-02 16:26:27,763	31317	org.example.Main	[main]	Attempting to add a Lego.Three, 3456, hard
+INFO	2024-02-02 16:26:29,254	32808	org.example.Main	[main]	Now retrieving all Lego: [Lego{name='One', itemNumber=1234, difficultyRate='easy'}, Lego{name='Two', itemNumber=2343, difficultyRate='medium'}, Lego{name='Three', itemNumber=3456, difficultyRate='hard'}]
+INFO	2024-02-02 16:26:49,124	52678	org.example.Main	[main]	Now retrieving all Lego: [Lego{name='One', itemNumber=1234, difficultyRate='easy'}, Lego{name='Two', itemNumber=2343, difficultyRate='medium'}, Lego{name='Three', itemNumber=3456, difficultyRate='hard'}]
+INFO	2024-02-02 16:27:05,724	69278	org.example.Main	[main]	Attempting to edit a Lego entry.Two, 2345, easy
+INFO	2024-02-02 17:12:10,360	0	org.example.Main	[main]	Attempting to add a Lego.one, 111, easy
+INFO	2024-02-02 17:12:20,700	10340	org.example.Main	[main]	Attempting to add a Lego.two, 222, medium
+INFO	2024-02-02 17:12:28,373	18013	org.example.Main	[main]	Attempting to add a Lego.three, 333, hard
+INFO	2024-02-02 17:12:31,469	21109	org.example.Main	[main]	Now retrieving all Lego: [Lego{name='one', itemNumber=111, difficultyRate='easy'}, Lego{name='two', itemNumber=222, difficultyRate='medium'}, Lego{name='three', itemNumber=333, difficultyRate='hard'}]
+INFO	2024-02-02 17:12:40,302	29942	org.example.Main	[main]	Now retrieving all Lego: [Lego{name='one', itemNumber=111, difficultyRate='easy'}, Lego{name='two', itemNumber=222, difficultyRate='medium'}, Lego{name='three', itemNumber=333, difficultyRate='hard'}]
+INFO	2024-02-02 17:12:58,134	47774	org.example.Main	[main]	Attempting to edit a Lego entry.one, 123, hard
